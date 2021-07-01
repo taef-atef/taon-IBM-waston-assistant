@@ -1,2 +1,3 @@
 # taon-IBM-waston-assistant
-chatbot reception at the meeting / celebration
+shatbot taon
+تاون المتحدث الرسمي في استقبال اجتماع او حفل يرحب بك ويقوم بالاجابه على الاسئله التي تريدها للدخول او حاله الاجتماع\الحفل وقادر على الاجابه عن ايه معلومه عامه عنه تريد مرفتها
