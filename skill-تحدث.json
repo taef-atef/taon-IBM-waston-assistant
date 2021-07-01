@@ -1,0 +1,491 @@
+{
+  "intents": [
+    {
+      "intent": "اسئلة-الريبوت",
+      "examples": [
+        {
+          "text": "ابي اسألك كم سؤال"
+        },
+        {
+          "text": "احتاج مساعده"
+        },
+        {
+          "text": "انت ربيوت"
+        },
+        {
+          "text": "بسألك"
+        },
+        {
+          "text": "سولف معي"
+        },
+        {
+          "text": "ممكن سؤال"
+        },
+        {
+          "text": "هل انت ريبوت"
+        },
+        {
+          "text": "هل تسطيع الكلام"
+        },
+        {
+          "text": "هل تسطيع مساعدتي"
+        },
+        {
+          "text": "هل تفهمني"
+        },
+        {
+          "text": "هل يمكن ان اسأل"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "الاستقبال",
+      "examples": [
+        {
+          "text": "اقدر ادخل"
+        },
+        {
+          "text": "انت موظف استقبال"
+        },
+        {
+          "text": "اين مكان الجلوس"
+        },
+        {
+          "text": "بدأ الاجتماع"
+        },
+        {
+          "text": "بدأ الاحتفال"
+        },
+        {
+          "text": "فين اقدر اجلس"
+        },
+        {
+          "text": "هل استطيع الدخول"
+        },
+        {
+          "text": "يمكنني الدخول"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ترحيب",
+      "examples": [
+        {
+          "text": "اقولك"
+        },
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "الو"
+        },
+        {
+          "text": "اهلا"
+        },
+        {
+          "text": "تاون"
+        },
+        {
+          "text": "سلام"
+        },
+        {
+          "text": "صباح الخير"
+        },
+        {
+          "text": "كيفك"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "مساء الخير"
+        },
+        {
+          "text": "موجود؟"
+        },
+        {
+          "text": "هاي"
+        },
+        {
+          "text": "هيلو"
+        },
+        {
+          "text": "يهلا"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "جنس-الريبوت",
+      "examples": [
+        {
+          "text": "انت رجال"
+        },
+        {
+          "text": "انت ولد"
+        },
+        {
+          "text": "انتي بنت"
+        },
+        {
+          "text": "انتي حرمه"
+        },
+        {
+          "text": "ايش جنسك"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "معلومات-الدخول",
+      "examples": [
+        {
+          "text": "زحمه"
+        },
+        {
+          "text": "في ناس كثير"
+        },
+        {
+          "text": "كم عدد الحضور"
+        },
+        {
+          "text": "هل امتلئ المكان"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "معلومات-الربيوت",
+      "examples": [
+        {
+          "text": "اخبرني عنك"
+        },
+        {
+          "text": "انت انسان"
+        },
+        {
+          "text": "ايش اسمك"
+        },
+        {
+          "text": "ايش الفايده منك"
+        },
+        {
+          "text": "ايش عمرك"
+        },
+        {
+          "text": "شسمك"
+        },
+        {
+          "text": "عرفني عليك"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "وداع",
+      "examples": [
+        {
+          "text": "الى اللقاء"
+        },
+        {
+          "text": "باي"
+        },
+        {
+          "text": "تسلم"
+        },
+        {
+          "text": "شكرا"
+        },
+        {
+          "text": "قود باي"
+        },
+        {
+          "text": "مشكور"
+        },
+        {
+          "text": "مع السلامه"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "معلومات-الدخول",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "تفضل عزيزي\\عزيزتي واتبع الاجراءات الاحترازيه"
+              },
+              {
+                "text": "يسرنا وجودك وتفضل "
+              },
+              {
+                "text": " تفضل ونوكد الحرص على الاجراءات "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#معلومات-الدخول",
+      "dialog_node": "node_1_1625130510992",
+      "previous_sibling": "node_7_1625129068195"
+    },
+    {
+      "type": "standard",
+      "title": "جنس-الريبوت",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لايهم ذلك"
+              },
+              {
+                "text": "استطيع ان افهمك في كل الاحوال"
+              },
+              {
+                "text": "فقط ربيوت "
+              },
+              {
+                "text": "تسطيع ان تراني كما يحلو لك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#جنس-الريبوت",
+      "dialog_node": "node_2_1625130157670",
+      "previous_sibling": "node_7_1624968625257"
+    },
+    {
+      "type": "standard",
+      "title": "اسئلة-الريبوت",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "تفضل,كيف اقدر اخدمك"
+              },
+              {
+                "text": "تفضل عزيزي\\عزيزتي"
+              },
+              {
+                "text": "نعم,تفضل"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#اسئلة-الريبوت",
+      "dialog_node": "node_7_1624968150750",
+      "previous_sibling": "node_9_1624962264669"
+    },
+    {
+      "type": "standard",
+      "title": "معلومات-الريبوت",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "انا ربيوت اجيبك عن الاسئله التي تريدها واحاول مساعدتك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#معلومات-الربيوت",
+      "dialog_node": "node_7_1624968625257",
+      "previous_sibling": "node_7_1624968150750"
+    },
+    {
+      "type": "standard",
+      "title": "الاستقبال",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "تفضل,بدخول شرفنا حضورك"
+              },
+              {
+                "text": "شرفنا حضورك "
+              },
+              {
+                "text": "نعم, تفضل"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#الاستقبال",
+      "dialog_node": "node_7_1625129068195",
+      "previous_sibling": "node_2_1625130157670"
+    },
+    {
+      "type": "standard",
+      "title": "ترحيب",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "يهلا"
+              },
+              {
+                "text": "اهلا منور"
+              },
+              {
+                "text": "يمرحبا امرني"
+              },
+              {
+                "text": "يهلاوسهلا"
+              },
+              {
+                "text": "تفضل"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ترحيب",
+      "dialog_node": "node_9_1624962264669",
+      "previous_sibling": "مرحبا"
+    },
+    {
+      "type": "standard",
+      "title": "وداع",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الى اللقاء"
+              },
+              {
+                "text": "في حفظ الرحمن"
+              },
+              {
+                "text": "نورتنا"
+              },
+              {
+                "text": "نلقاك مره اخرى"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#وداع",
+      "dialog_node": "node_9_1625130941349",
+      "previous_sibling": "node_1_1625130510992"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لم أفهم، يمكنك محاولة اعادة الصياغة"
+              },
+              {
+                "text": "هل يمكنك اعادة صياغة عبارتك؟ أنا لا فهم"
+              },
+              {
+                "text": "لم أفهم قصدك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_9_1625130941349",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "مرحبا",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "هلا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "مرحبا"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "تحدث",
+  "language": "ar",
+  "description": ""
+}
