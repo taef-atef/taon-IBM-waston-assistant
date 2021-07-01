@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css"> 
+<meta charset="utf-8">
+<title>HOME</title>
+<style>
+*{
+padding: 0;
+margin: 0;
+}
+	
+#o1{
+	background-color:lightyellow;
+	width:100%;
+	height:200px;
+	background-color:gray;
+}
+#o2{
+background-color:lightyellow;
+	width:100%;
+	height:300px;}
+
+#o3{
+background-color:lightyellow;
+	width:100%;
+	height:200px;
+	clear:both;
+	}	
+
+#b1 ,#b2 ,#b3 ,#b4 ,#b5{
+height:50px;
+font-size: 40px;
+ background-color:pink;
+ border-radius: 10px;
+
+ }
+#b{
+width:100%;
+align-items:center;
+justify-content:center;
+text-align:center;
+place-items:center;
+
+
+ }
+p{
+position:absolute;
+top:100px;
+left:520px;
+color:pink;
+
+font-size:50px;
+
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div id="o1">
+<p>contorlMe</p>
+</div>
+
+<div id="o2"> 
+
+<div id="b">
+<br>
+<form action="index.php" method="POST" >
+<input type="submit" value = "forward" name = forward  id="b1" > <br>
+<input type="submit" value = "left" name = left  id="b2" > 
+<input type="submit" value = "stop" name = stop   id="b3" >
+<input type="submit" value = "right" name = right  id="b4"  > <br>
+<input type="submit" value = "backward" name = backward   id="b5" >
+</div>
+</form>
+</div>
+<div id="o3">
+</div>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "c17bbad0-0321-48eb-948e-03e2956a2631", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "a2a8a6cf-ba15-4e9c-a3d8-c986740d33d5", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
